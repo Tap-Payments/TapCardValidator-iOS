@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F8116EB460EF284151D758A /* Pods_TapCardValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF437BF95D86466D73780A6F /* Pods_TapCardValidator.framework */; };
+		A4DC20C81FFFD49000732D6C /* TapCardValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = A4DC20C61FFFD49000732D6C /* TapCardValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4DC20D01FFFD4E800732D6C /* CardBINRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC20CF1FFFD4E800732D6C /* CardBINRange.swift */; };
+		A4DC20D21FFFD55E00732D6C /* CardBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC20D11FFFD55E00732D6C /* CardBrand.swift */; };
+		A4DC20D41FFFE80A00732D6C /* DefinedCardBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC20D31FFFE80A00732D6C /* DefinedCardBrand.swift */; };
+		A4DC20D61FFFE82D00732D6C /* CardValidationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC20D51FFFE82D00732D6C /* CardValidationState.swift */; };
+		A4DC20D81FFFE8AD00732D6C /* CardValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DC20D71FFFE8AD00732D6C /* CardValidator.swift */; };
+		A4E4E02B2004EAAA000FB872 /* TapCardValidator.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A4E4E02A2004EAA9000FB872 /* TapCardValidator.podspec */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8689A510893CE0FA656317A7 /* Pods-TapCardValidator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapCardValidator.release.xcconfig"; path = "Pods/Target Support Files/Pods-TapCardValidator/Pods-TapCardValidator.release.xcconfig"; sourceTree = "<group>"; };
+		A4DC20C31FFFD49000732D6C /* TapCardValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TapCardValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4DC20C61FFFD49000732D6C /* TapCardValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TapCardValidator.h; sourceTree = "<group>"; };
+		A4DC20C71FFFD49000732D6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4DC20CF1FFFD4E800732D6C /* CardBINRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBINRange.swift; sourceTree = "<group>"; };
+		A4DC20D11FFFD55E00732D6C /* CardBrand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBrand.swift; sourceTree = "<group>"; };
+		A4DC20D31FFFE80A00732D6C /* DefinedCardBrand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinedCardBrand.swift; sourceTree = "<group>"; };
+		A4DC20D51FFFE82D00732D6C /* CardValidationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValidationState.swift; sourceTree = "<group>"; };
+		A4DC20D71FFFE8AD00732D6C /* CardValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValidator.swift; sourceTree = "<group>"; };
+		A4E4E02A2004EAA9000FB872 /* TapCardValidator.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TapCardValidator.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BF437BF95D86466D73780A6F /* Pods_TapCardValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapCardValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D79E7186652B27CCE037B86A /* Pods-TapCardValidator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapCardValidator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TapCardValidator/Pods-TapCardValidator.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4DC20BF1FFFD49000732D6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F8116EB460EF284151D758A /* Pods_TapCardValidator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9EABB298C3BE82128AEBCCAB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D79E7186652B27CCE037B86A /* Pods-TapCardValidator.debug.xcconfig */,
+				8689A510893CE0FA656317A7 /* Pods-TapCardValidator.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A4DC20B91FFFD49000732D6C = {
+			isa = PBXGroup;
+			children = (
+				A4E4E02A2004EAA9000FB872 /* TapCardValidator.podspec */,
+				A4DC20C51FFFD49000732D6C /* TapCardValidator */,
+				A4DC20C41FFFD49000732D6C /* Products */,
+				9EABB298C3BE82128AEBCCAB /* Pods */,
+				D77FF02D5DC80C4E373DD0F0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A4DC20C41FFFD49000732D6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4DC20C31FFFD49000732D6C /* TapCardValidator.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4DC20C51FFFD49000732D6C /* TapCardValidator */ = {
+			isa = PBXGroup;
+			children = (
+				A4DC20C61FFFD49000732D6C /* TapCardValidator.h */,
+				A4DC20C71FFFD49000732D6C /* Info.plist */,
+				A4DC20CE1FFFD4B300732D6C /* Source */,
+			);
+			path = TapCardValidator;
+			sourceTree = "<group>";
+		};
+		A4DC20CE1FFFD4B300732D6C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				A4DC20CF1FFFD4E800732D6C /* CardBINRange.swift */,
+				A4DC20D11FFFD55E00732D6C /* CardBrand.swift */,
+				A4DC20D51FFFE82D00732D6C /* CardValidationState.swift */,
+				A4DC20D71FFFE8AD00732D6C /* CardValidator.swift */,
+				A4DC20D31FFFE80A00732D6C /* DefinedCardBrand.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		D77FF02D5DC80C4E373DD0F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF437BF95D86466D73780A6F /* Pods_TapCardValidator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A4DC20C01FFFD49000732D6C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4DC20C81FFFD49000732D6C /* TapCardValidator.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A4DC20C21FFFD49000732D6C /* TapCardValidator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4DC20CB1FFFD49000732D6C /* Build configuration list for PBXNativeTarget "TapCardValidator" */;
+			buildPhases = (
+				C0DA678E2A68C2BF451EB811 /* [CP] Check Pods Manifest.lock */,
+				A4DC20BE1FFFD49000732D6C /* Sources */,
+				A4DC20BF1FFFD49000732D6C /* Frameworks */,
+				A4E4E02C2004EC4C000FB872 /* Swift Lint */,
+				A4DC20C01FFFD49000732D6C /* Headers */,
+				A4DC20C11FFFD49000732D6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TapCardValidator;
+			productName = TapCardValidator;
+			productReference = A4DC20C31FFFD49000732D6C /* TapCardValidator.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4DC20BA1FFFD49000732D6C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Tap Payments";
+				TargetAttributes = {
+					A4DC20C21FFFD49000732D6C = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A4DC20BD1FFFD49000732D6C /* Build configuration list for PBXProject "TapCardValidator" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A4DC20B91FFFD49000732D6C;
+			productRefGroup = A4DC20C41FFFD49000732D6C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4DC20C21FFFD49000732D6C /* TapCardValidator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4DC20C11FFFD49000732D6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E4E02B2004EAAA000FB872 /* TapCardValidator.podspec in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A4E4E02C2004EC4C000FB872 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+		};
+		C0DA678E2A68C2BF451EB811 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TapCardValidator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A4DC20BE1FFFD49000732D6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4DC20D01FFFD4E800732D6C /* CardBINRange.swift in Sources */,
+				A4DC20D41FFFE80A00732D6C /* DefinedCardBrand.swift in Sources */,
+				A4DC20D61FFFE82D00732D6C /* CardValidationState.swift in Sources */,
+				A4DC20D21FFFD55E00732D6C /* CardBrand.swift in Sources */,
+				A4DC20D81FFFE8AD00732D6C /* CardValidator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A4DC20C91FFFD49000732D6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A4DC20CA1FFFD49000732D6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A4DC20CC1FFFD49000732D6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D79E7186652B27CCE037B86A /* Pods-TapCardValidator.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = G46S76PUH4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TapCardValidator/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = company.tap.ios.TapCardValidator;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A4DC20CD1FFFD49000732D6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8689A510893CE0FA656317A7 /* Pods-TapCardValidator.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = G46S76PUH4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TapCardValidator/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = company.tap.ios.TapCardValidator;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A4DC20BD1FFFD49000732D6C /* Build configuration list for PBXProject "TapCardValidator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4DC20C91FFFD49000732D6C /* Debug */,
+				A4DC20CA1FFFD49000732D6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4DC20CB1FFFD49000732D6C /* Build configuration list for PBXNativeTarget "TapCardValidator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4DC20CC1FFFD49000732D6C /* Debug */,
+				A4DC20CD1FFFD49000732D6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A4DC20BA1FFFD49000732D6C /* Project object */;
+}
