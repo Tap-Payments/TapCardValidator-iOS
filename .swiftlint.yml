@@ -1,6 +1,7 @@
 excluded:
  Pods
 disabled_rules:
+ - colon
  - comma
  - cyclomatic_complexity
  - file_length

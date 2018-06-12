@@ -6,32 +6,136 @@
 //
 
 /// Card Brand.
-public enum CardBrand: String {
+public enum CardBrand {
 
-    public typealias RawValue = String
-
-    case aiywaLoyalty = "Aiywa Loyalty"
-    case americanExpress = "AMEX"
-    case cardGuard = "CARDGUARD"
-    case cbk = "CBK"
-    case dankort = "DANKORT"
-    case discover = "DISCOVER"
-    case dinersClub = "DINERS"
-    case instaPayment = "INSTAPAY"
-    case interPayment = "INTERPAY"
-    case jcb = "JCB"
-    case knet = "KNET"
-    case maestro = "MAESTRO"
-    case masterCard = "MASTERCARD"
-    case nspkMir = "NSPK"
-    case tap = "TAP"
-    case uatp = "UATP"
-    case unionPay = "UNIONPAY"
-    case verve = "VERVE"
-    case visa = "VISA"
-    case viva = "Viva PAY"
-    case wataniya = "Wataniya PAY"
-    case zain = "Zain PAY"
+    case aiywaLoyalty
+    case americanExpress
+    case benefit
+    case cardGuard
+    case cbk
+    case dankort
+    case discover
+    case dinersClub
+    case fawry
+    case instaPayment
+    case interPayment
+    case jcb
+    case knet
+    case mada
+    case maestro
+    case masterCard
+    case naps
+    case nspkMir
+    case sadad
+    case tap
+    case uatp
+    case unionPay
+    case verve
+    case visa
+    case viva
+    case wataniya
+    case zain
 
     case unknown
+
+    // MARK: - Private -
+
+    private struct RawValues {
+
+        fileprivate static let table: [CardBrand: [String]] = [
+
+            .aiywaLoyalty       : RawValues.aiywaLoyalty,
+            .americanExpress    : RawValues.americanExpress,
+            .benefit            : RawValues.benefit,
+            .cardGuard          : RawValues.cardGuard,
+            .cbk                : RawValues.cbk,
+            .dankort            : RawValues.dankort,
+            .discover           : RawValues.discover,
+            .dinersClub         : RawValues.dinersClub,
+            .fawry              : RawValues.fawry,
+            .instaPayment       : RawValues.instaPayment,
+            .interPayment       : RawValues.interPayment,
+            .jcb                : RawValues.jcb,
+            .knet               : RawValues.knet,
+            .mada               : RawValues.mada,
+            .maestro            : RawValues.maestro,
+            .masterCard         : RawValues.masterCard,
+            .naps               : RawValues.naps,
+            .nspkMir            : RawValues.nspkMir,
+            .sadad              : RawValues.sadad,
+            .tap                : RawValues.tap,
+            .uatp               : RawValues.uatp,
+            .unionPay           : RawValues.unionPay,
+            .verve              : RawValues.verve,
+            .visa               : RawValues.visa,
+            .viva               : RawValues.viva,
+            .wataniya           : RawValues.wataniya,
+            .zain               : RawValues.zain
+        ]
+
+        private static let aiywaLoyalty     = ["Aiywa Loyalty"]
+        private static let americanExpress  = ["AMERICAN_EXPRESS", "AMEX"]
+        private static let benefit          = ["BENEFIT"]
+        private static let cardGuard        = ["CARDGUARD"]
+        private static let cbk              = ["CBK"]
+        private static let dankort          = ["DANKORT"]
+        private static let discover         = ["DISCOVER"]
+        private static let dinersClub       = ["DINERS_CLUB", "DINERS"]
+        private static let fawry            = ["FAWRY"]
+        private static let instaPayment     = ["INSTAPAY"]
+        private static let interPayment     = ["INTERPAY"]
+        private static let jcb              = ["JCB"]
+        private static let knet             = ["KNET"]
+        private static let mada             = ["MADA"]
+        private static let maestro          = ["MAESTRO"]
+        private static let masterCard       = ["MASTERCARD"]
+        private static let naps             = ["NAPS"]
+        private static let nspkMir          = ["NSPK"]
+        private static let sadad            = ["SADAD_ACCOUNT"]
+        private static let tap              = ["TAP"]
+        private static let uatp             = ["UATP"]
+        private static let unionPay         = ["UNION_PAY", "UNIONPAY"]
+        private static let verve            = ["VERVE"]
+        private static let visa             = ["VISA"]
+        private static let viva             = ["Viva PAY"]
+        private static let wataniya         = ["Wataniya PAY"]
+        private static let zain             = ["Zain PAY"]
+
+        @available(*, unavailable) private init() {}
+    }
+}
+
+// MARK: - Encodable
+extension CardBrand: Encodable {
+
+    public func encode(to encoder: Encoder) throws {
+
+        guard let value = RawValues.table[self]?.first else {
+
+            fatalError("Unknown card brand.")
+        }
+
+        var container = encoder.singleValueContainer()
+        try container.encode(value)
+    }
+}
+
+// MARK: - Decodable
+extension CardBrand: Decodable {
+
+    public init(from decoder: Decoder) throws {
+
+        let container = try decoder.singleValueContainer()
+        let value = try container.decode(String.self)
+
+        for (brand, rawValues) in RawValues.table {
+
+            guard rawValues.contains(value) else { continue }
+
+            self = brand
+            return
+        }
+
+        self = .unknown
+    }
 }
