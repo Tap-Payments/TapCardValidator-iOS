@@ -110,6 +110,13 @@ internal class CardBINRange {
         return possibleBrands
     }
 
+    internal static func ranges(for brand: CardBrand? = nil) -> [CardBINRange] {
+
+        guard let nonnullBrand = brand else { return self.allRanges }
+
+        return self.allRanges.filter { $0.cardBrand == nonnullBrand }
+    }
+
     // MARK: - Private -
 
     private struct Constants {

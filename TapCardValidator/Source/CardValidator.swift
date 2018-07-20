@@ -82,8 +82,19 @@ public class CardValidator {
         }
         else {
 
-            return [3, 7, 11]
+            return [3, 7, 11, 15]
         }
+    }
+
+    /// Returns maximal card number length for a specific `brand` or maximal possible card number length if `brand` is `nil`.
+    ///
+    /// - Parameter brand: Card brand or nil.
+    /// - Returns: Maximal card number length.
+    public static func maximalCardNumberLength(for brand: CardBrand?) -> Int {
+
+        let ranges = CardBINRange.ranges(for: brand)
+        let lengths = ranges.flatMap { $0.cardNumberLengths }
+        return lengths.max() ?? 0
     }
 
     /// Returns required cvv length for a given card brand.
