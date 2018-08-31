@@ -30,12 +30,12 @@ public final class CardValidator {
 
         guard let number = cardNumber?.trimmingCharacters(in: Constants.whitespacesCharacterSet), number.count > 0 else {
 
-            return DefinedCardBrand(validationState: .incomplete, cardBrand: nil)
+            return DefinedCardBrand(.incomplete, nil)
         }
 
         guard self.containsOnlyInternationalDigits(number) else {
 
-            return DefinedCardBrand(validationState: .invalid, cardBrand: nil)
+            return DefinedCardBrand(.invalid, nil)
         }
 
         var binRange = CardBINRange.mostSpecific(for: number, preferredBrands: preferredBrands)
@@ -47,26 +47,26 @@ public final class CardValidator {
             cardBrand = binRange.cardBrand
         }
 
-        guard cardBrand != .unknown else { return DefinedCardBrand(validationState: .invalid, cardBrand: nil) }
+        guard cardBrand != .unknown else { return DefinedCardBrand(.invalid, nil) }
 
         if binRange.cardNumberLengths.contains(number.count) {
 
             if self.passesLuhn(number) {
 
-                return DefinedCardBrand(validationState: .valid, cardBrand: cardBrand)
+                return DefinedCardBrand(.valid, cardBrand)
             }
             else {
 
-                return DefinedCardBrand(validationState: .invalid, cardBrand: cardBrand)
+                return DefinedCardBrand(.invalid, cardBrand)
             }
         }
         else if number.count > binRange.cardNumberLengths.max()! {
 
-            return DefinedCardBrand(validationState: .invalid, cardBrand: cardBrand)
+            return DefinedCardBrand(.invalid, cardBrand)
         }
         else {
 
-            return DefinedCardBrand(validationState: .incomplete, cardBrand: cardBrand)
+            return DefinedCardBrand(.incomplete, cardBrand)
         }
     }
 
