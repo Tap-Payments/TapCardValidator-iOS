@@ -6,7 +6,7 @@
 //
 
 /// Card validator.
-public class CardValidator {
+public final class CardValidator {
 
     // MARK: - Public -
     // MARK: Methods

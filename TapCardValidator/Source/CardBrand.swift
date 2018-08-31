@@ -6,7 +6,7 @@
 //
 
 /// Card Brand.
-public enum CardBrand {
+@objc public enum CardBrand: Int {
 
     case aiywaLoyalty
     case americanExpress
@@ -26,6 +26,7 @@ public enum CardBrand {
     case masterCard
     case naps
     case nspkMir
+    case omanNet
     case sadad
     case tap
     case uatp
@@ -62,6 +63,7 @@ public enum CardBrand {
             .masterCard         : RawValues.masterCard,
             .naps               : RawValues.naps,
             .nspkMir            : RawValues.nspkMir,
+            .omanNet            : RawValues.omanNet,
             .sadad              : RawValues.sadad,
             .tap                : RawValues.tap,
             .uatp               : RawValues.uatp,
@@ -91,6 +93,7 @@ public enum CardBrand {
         private static let masterCard       = ["MASTERCARD"]
         private static let naps             = ["NAPS"]
         private static let nspkMir          = ["NSPK"]
+        private static let omanNet          = ["OMAN_NET"]
         private static let sadad            = ["SADAD_ACCOUNT"]
         private static let tap              = ["TAP"]
         private static let uatp             = ["UATP"]

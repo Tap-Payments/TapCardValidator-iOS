@@ -6,7 +6,7 @@
 //
 
 /// Card BIN range.
-internal class CardBINRange {
+internal final class CardBINRange {
 
     // MARK: - Public -
     // MARK: Properties
