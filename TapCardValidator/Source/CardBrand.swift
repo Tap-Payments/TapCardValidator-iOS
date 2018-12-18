@@ -33,6 +33,7 @@
     case unionPay
     case verve
     case visa
+	case visaElectron
     case viva
     case wataniya
     case zain
@@ -70,6 +71,7 @@
             .unionPay           : RawValues.unionPay,
             .verve              : RawValues.verve,
             .visa               : RawValues.visa,
+			.visaElectron		: RawValues.visaElectron,
             .viva               : RawValues.viva,
             .wataniya           : RawValues.wataniya,
             .zain               : RawValues.zain
@@ -100,6 +102,7 @@
         private static let unionPay         = ["UNION_PAY", "UNIONPAY"]
         private static let verve            = ["VERVE"]
         private static let visa             = ["VISA"]
+		private static let visaElectron		= ["VISA_ELECTRON"]
         private static let viva             = ["Viva PAY"]
         private static let wataniya         = ["Wataniya PAY"]
         private static let zain             = ["Zain PAY"]
