@@ -57,7 +57,7 @@ internal final class CardBINRange {
 
         let sortByPreferabilityClosure: (CardBINRange, CardBINRange) -> Bool = { (range1, range2) -> Bool in
 
-            return (nonnullPreferredBrands.index(of: range1.cardBrand) ?? 0) <= (nonnullPreferredBrands.index(of: range2.cardBrand) ?? 0)
+            return (nonnullPreferredBrands.firstIndex(of: range1.cardBrand) ?? 0) <= (nonnullPreferredBrands.firstIndex(of: range2.cardBrand) ?? 0)
         }
 
         let numberLength = number.count

@@ -2,11 +2,11 @@ Pod::Spec.new do |tapCardValidator|
     
     tapCardValidator.platform               = :ios
     tapCardValidator.ios.deployment_target  = '8.0'
-    tapCardValidator.swift_version          = '4.2'
+    tapCardValidator.swift_versions         = ['4.2', '5.0']
     tapCardValidator.name                   = 'TapCardValidator'
     tapCardValidator.summary                = 'Bank cards validation library'
     tapCardValidator.requires_arc           = true
-    tapCardValidator.version                = '1.2.4'
+    tapCardValidator.version                = '1.2.5'
     tapCardValidator.license                = { :type => 'MIT', :file => 'LICENSE' }
     tapCardValidator.author                 = { 'Tap Payments' => 'hello@tap.company' }
     tapCardValidator.homepage               = 'https://github.com/Tap-Payments/TapCardValidator-iOS'
