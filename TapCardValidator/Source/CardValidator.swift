@@ -11,11 +11,14 @@ public final class CardValidator {
     // MARK: - Public -
     // MARK: Methods
 
+    
     /// Validates card number.
     ///
     /// - Parameter cardNumber: Card number.
+    /// - Parameter minimumAllowedLength: minimum allowed Card number.
+    /// - Parameter maximumAllowedLength: maximum allowed Card number.
     /// - Returns: Card brand with its validation state.
-    public static func validate(cardNumber: String?) -> DefinedCardBrand {
+    public static func validate(cardNumber: String?,minimumAllowedLength: Int = 0,maximumAllowedLength: Int = 0) -> DefinedCardBrand {
 
         return self.validate(cardNumber: cardNumber, preferredBrands: nil)
     }
@@ -25,8 +28,10 @@ public final class CardValidator {
     /// - Parameters:
     ///   - cardNumber: Card number.
     ///   - preferredBrands: Preferred brands.
+    /// - Parameter minimumAllowedLength: minimum allowed Card number.
+    /// - Parameter maximumAllowedLength: maximum allowed Card number.
     /// - Returns: Card brand with its validation state.
-    public static func validate(cardNumber: String?, preferredBrands: [CardBrand]?) -> DefinedCardBrand {
+    public static func validate(cardNumber: String?, preferredBrands: [CardBrand]?,minimumAllowedLength: Int = 0,maximumAllowedLength: Int = 0) -> DefinedCardBrand {
 
         guard let number = cardNumber?.trimmingCharacters(in: Constants.whitespacesCharacterSet), number.count > 0 else {
 
@@ -35,6 +40,12 @@ public final class CardValidator {
 
         guard self.containsOnlyInternationalDigits(number) else {
 
+            return DefinedCardBrand(.invalid, nil)
+        }
+        
+        
+        if maximumAllowedLength < minimumAllowedLength
+        {
             return DefinedCardBrand(.invalid, nil)
         }
 
@@ -47,8 +58,18 @@ public final class CardValidator {
             cardBrand = binRange.cardBrand
         }
 
+        let shouldApplyMinMaxRule:Bool = (minimumAllowedLength >= 0 && maximumAllowedLength > 0)
+        
         guard cardBrand != .unknown else { return DefinedCardBrand(.invalid, nil) }
 
+        if shouldApplyMinMaxRule
+        {
+            if number.count < minimumAllowedLength || number.count > maximumAllowedLength
+            {
+                return DefinedCardBrand(.invalid, cardBrand)
+            }
+        }
+        
         if binRange.cardNumberLengths.contains(number.count) {
 
             if self.passesLuhn(number) {
