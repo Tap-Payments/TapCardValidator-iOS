@@ -19,7 +19,7 @@ internal final class CardBINRange {
 
     /// Required card number length.
     internal private(set) var cardNumberLengths: [Int]
-    
+
     /// Required card number length.
     internal private(set) var cardNumberSpaces: [Int]
 

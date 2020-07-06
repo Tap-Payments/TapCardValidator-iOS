@@ -69,11 +69,9 @@ public final class CardValidator {
             return DefinedCardBrand(.incomplete, cardBrand)
         }
     }
-    
-    
+
     public static func cardSpacing(cardNumber: String?) -> [Int] {
         let defaultSpacing = [4,4,4,4]
-        
         guard let number = cardNumber?.trimmingCharacters(in: Constants.whitespacesCharacterSet), number.count > 0 else {
 
             return defaultSpacing
@@ -84,10 +82,8 @@ public final class CardValidator {
             return defaultSpacing
         }
 
-        var binRange = CardBINRange.mostSpecific(for: number, preferredBrands: nil)
-        var cardBrand = binRange.cardBrand
-
-       
+        let binRange = CardBINRange.mostSpecific(for: number, preferredBrands: nil)
+        let cardBrand = binRange.cardBrand
 
         guard cardBrand != .unknown else { return defaultSpacing }
 
